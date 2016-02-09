@@ -1,0 +1,95 @@
+UserModule_Signup:
+    pattern: /signup
+    defaults: { _controller: "UserModule:Auth:signup"}
+
+UserModule_Signup_Save:
+    pattern: /signupsave
+    defaults: { _controller: "UserModule:Auth:signupsave"}
+    requirements:
+        _method: POST
+
+UserModule_Login:
+    pattern: /login
+    defaults: { _controller: "UserModule:Auth:login"}
+
+UserModule_Logout:
+    pattern: /logout
+    defaults: { _controller: "UserModule:Auth:logout"}
+
+UserModule_Login_Check:
+    pattern: /logincheck
+    defaults: { _controller: "UserModule:Auth:logincheck"}
+    requirements:
+        _method: POST
+
+UserModule_Activate:
+    pattern: /activate/{token}
+    defaults: { _controller: "UserModule:Auth:activate"}
+
+UserModule_Forgot_Password:
+    pattern: /forgotpw
+    defaults: { _controller: "UserModule:Auth:forgotpw"}
+
+UserModule_Forgot_Password_Send:
+    pattern: /forgotpwsend
+    defaults: { _controller: "UserModule:Auth:forgotpwsend"}
+    requirements:
+        _method: POST
+
+UserModule_Forgot_Password_Check:
+    pattern: /forgotpwcheck/{token}
+    defaults: { _controller: "UserModule:Auth:forgotpwcheck"}
+
+UserModule_Forgot_Password_Save:
+    pattern: /forgotpwsave
+    defaults: { _controller: "UserModule:Auth:forgotpwsave"}
+    requirements:
+        _method: POST
+
+UserModule_Account:
+    pattern: /account
+    defaults: { _controller: "UserModule:Account:view"}
+
+UserModule_Edit_Account:
+    pattern: /editaccount
+    defaults: { _controller: "UserModule:Account:edit"}
+
+UserModule_Edit_Account_Save:
+    pattern: /editaccountsave
+    defaults: { _controller: "UserModule:Account:editsave"}
+
+UserModule_Edit_Password:
+    pattern: /editpassword
+    defaults: { _controller: "UserModule:Account:editpassword"}
+
+UserModule_Edit_Password_Save:
+    pattern: /editpasswordsave
+    defaults: { _controller: "UserModule:Account:editpasswordsave"}
+
+UserModule_Manage_List:
+    pattern: /UserModules/manage
+    defaults: { _controller: "UserModule:Manage:list"}
+
+UserModule_Manage_Edit:
+    pattern: /UserModules/manage/edit/{id}
+    defaults: { _controller: "UserModule:Manage:edit"}
+
+UserModule_Manage_Delete:
+    pattern: /UserModules/manage/delete/{id}
+    defaults: { _controller: "UserModule:Manage:delete"}
+
+UserModule_Manage_Create:
+    pattern: /UserModules/manage/create
+    defaults: { _controller: "UserModule:Manage:create"}
+
+UserModule_Manage_Create_Save:
+    pattern: /UserModules/manage/createsave
+    defaults: { _controller: "UserModule:Manage:createsave"}
+    requirements:
+        _method: POST
+
+UserModule_Manage_Edit_Save:
+    pattern: /UserModules/manage/editsave/{id}
+    defaults: { _controller: "UserModule:Manage:editsave"}
+    requirements:
+        _method: POST

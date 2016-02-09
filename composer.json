@@ -1,0 +1,27 @@
+{
+    "name": "ppi/user-module",
+    "description": "The PPI Framework User Module",
+    "homepage": "http://www.ppi.io",
+    "license": "MIT",
+    "keywords": ["framework", "user"],
+    "type": "library",
+    "authors": [
+        {
+            "name": "Paul Dragoonis",
+            "email": "paul@ppi.io"
+        }
+    ],
+    "require": {
+        "ppi/framework": "~2.1.0-alpha2",
+        "swiftmailer/swiftmailer": ">=4.2.0,<4.3-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "UserModule\\": "src/",
+            "UserModule\\Tests\\": "tests/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
