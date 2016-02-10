@@ -1,18 +1,16 @@
 {
-    "name": "ppi/user-module",
-    "description": "The PPI Framework User Module",
-    "homepage": "http://www.ppi.io",
+    "name": "evolve/user-module",
+    "description": "The Evolve App - User Module",
     "license": "MIT",
     "keywords": ["framework", "user"],
     "type": "library",
     "authors": [
         {
-            "name": "Paul Dragoonis",
-            "email": "paul@ppi.io"
+            "name": "Ross Moroney",
+            "email": "code.ph0y@googlemail.com"
         }
     ],
     "require": {
-        "ppi/framework": "~2.1.0-alpha2",
         "swiftmailer/swiftmailer": ">=4.2.0,<4.3-dev"
     },
     "autoload": {

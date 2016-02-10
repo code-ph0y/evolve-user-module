@@ -6,12 +6,29 @@ use PPI\Framework\Module\AbstractModule;
 
 class Module extends AbstractModule
 {
-
+    /**
+     * Initialize Module
+     */
     public function init($e)
     {
         Autoload::add(__NAMESPACE__, dirname(__DIR__));
     }
 
+    /**
+     * Get Module Name
+     *
+     * @return array
+     */
+    public function getName()
+    {
+        return 'UserModule';
+    }
+
+    /**
+     * Get the Autoloader configuration for this module
+     *
+     * @return array
+     */
     public function getAutoloaderConfig()
     {
         return array(
@@ -21,14 +38,6 @@ class Module extends AbstractModule
                 ),
             ),
         );
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getName()
-    {
-        return 'UserModule';
     }
 
     /**
@@ -50,6 +59,10 @@ class Module extends AbstractModule
         return $this->loadSymfonyRoutes(__DIR__ . '/resources/routes/symfony.yml');
     }
 
+    /**
+     * Get the Service Config
+     *
+     */
     public function getServiceConfig()
     {
         return array('factories' => array(
